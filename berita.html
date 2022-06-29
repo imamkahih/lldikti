@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <script>
+        !(function () {
+            var e = {};
+            (e.g = (function () {
+                if ("object" == typeof globalThis) return globalThis;
+                try {
+                    return this || new Function("return this")();
+                } catch (e) {
+                    if ("object" == typeof window) return window;
+                }
+            })()),
+                (function (n) {
+                    let {
+                        ampUrl: t,
+                        isCustomizePreview: r,
+                        isAmpDevMode: o,
+                        noampQueryVarName: s,
+                        noampQueryVarValue: i,
+                        disabledStorageKey: a,
+                        mobileUserAgents: c,
+                        regexRegex: u,
+                    } = n;
+                    if ("undefined" == typeof sessionStorage) return;
+                    const d = new RegExp(u);
+                    if (
+                        !c.some((e) => {
+                            const n = e.match(d);
+                            return (
+                                !(!n || !new RegExp(n[1], n[2]).test(navigator.userAgent)) ||
+                                navigator.userAgent.includes(e)
+                            );
+                        })
+                    )
+                        return;
+                    e.g.addEventListener("DOMContentLoaded", () => {
+                        const e = document.getElementById("amp-mobile-version-switcher");
+                        if (!e) return;
+                        e.hidden = !1;
+                        const n = e.querySelector("a[href]");
+                        n &&
+                            n.addEventListener("click", () => {
+                                sessionStorage.removeItem(a);
+                            });
+                    });
+                    const g =
+                        o &&
+                        ["paired-browsing-non-amp", "paired-browsing-amp"].includes(
+                            window.name
+                        );
+                    if (sessionStorage.getItem(a) || r || g) return;
+                    const m = new URL(location.href),
+                        h = new URL(t);
+                    (h.hash = m.hash),
+                        m.searchParams.has(s) && i === m.searchParams.get(s)
+                            ? sessionStorage.setItem(a, "1")
+                            : h.href !== m.href &&
+                            (window.stop(), location.replace(h.href));
+                })({
+                    ampUrl: "https:\/\/demo.bootstrap.news\/default\/amp\/",
+                    noampQueryVarName: "noamp",
+                    noampQueryVarValue: "mobile",
+                    disabledStorageKey: "amp_mobile_redirect_disabled",
+                    mobileUserAgents: [
+                        "Mobile",
+                        "Android",
+                        "Silk\/",
+                        "Kindle",
+                        "BlackBerry",
+                        "Opera Mini",
+                        "Opera Mobi",
+                    ],
+                    regexRegex: "^\\/((?:.|\n)+)\\/([i]*)$",
+                    isCustomizePreview: false,
+                    isAmpDevMode: fa,
+                });
+        })();
+    </script>
+    <title>LLDIKTI/Berita</title>
+    <link rel="stylesheet" id="bootnews-styles-css"
+        href="https://demo.bootstrap.news/default/wp-content/themes/bootnews/dist/css/bundle.min.css?ver=2.2.0.1655846776"
+        media="all" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo.jpg"
+                        alt="lldikti4" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Profile
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="#">Profil LLDIKTI 4</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Profil Kepala LLDIKTI 4</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="info.html">Info</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Akuntabilitas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="berita.html">Berita</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Layanan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Informasi Publik</a>
+                        </li>
+                    </ul>
+                    <a href="" class="btn bg-blue white rounded-3">Kontak Pengaduan</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- awal -->
+    <div class="container">
+        <div class="top-section col-12 mt-05">
+            <div class="row py-2">
+                <!--Breaking box-->
+                <div class="col-2 col-sm-1 col-md-3 col-lg-2 py-1 pe-md-0">
+                    <div class="d-inline-block d-md-block text-white text-center breaking-caret py-1 px-2"
+                        style="background-color:#2657a7 ;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor"
+                            class="bi bi-lightning-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z">
+                            </path>
+                        </svg>
+                        <span class="d-none d-md-inline-block">Berita Terbaru</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--Big grid style 1-->
+            <div class="row featured-1 mb-5">
+                <!--Start slider news-->
+                <div class="col-md-6 pb-05 pt-05 pe-md-05">
+                    <article class="card card-full text-light overflow zoom">
+                        <div class="height-ratio image-wrapper">
+                            <a
+                                href="https://demo.bootstrap.news/default/2019/06/the-worlds-first-floating-farm-making-waves-in-rotterdam/">
+                                <img width="568" height="484" src="assets/img/carousel1.jpg"
+                                    class="img-fluid lazy wp-post-image entered loaded"
+                                    alt="The world’s first floating farm making waves in Rotterdam" loading="lazy"
+                                    data-src="assets/img/carousel1.jpg" srcset="
+                      assets/img/carousel1.jpg 568w
+                    " sizes="(max-width: 568px) 100vw, 568px" data-ll-status="loaded" />
+                            </a>
+                        </div>
+                        <div class="position-absolute p-3 b-0 w-100 bg-lg-shadow">
+                            <!-- post title -->
+                            <h2 class="h1-sm h2-md display-4-lg fw-bold heading-letter-space text-white">
+                                <a class="text-white"
+                                    href="https://demo.bootstrap.news/default/2019/06/the-worlds-first-floating-farm-making-waves-in-rotterdam/">The
+                                    world’s first floating farm making waves in
+                                    Rotterdam</a>
+                            </h2>
+                            <!-- author and date -->
+                            <div class="news-meta mb-2">
+                                <span class="news-author white">
+                                    <span class="fw-bold"><a href="https://demo.bootstrap.news/default/author/aribudin/"
+                                            title="Posts by Ari Budin" rel="author">koala</a></span></span>
+                                <time class="news-date" datetime="2019-06-13T01:12:26+00:00">June 13, 2019</time>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--Start box news-->
+                <div class="col-md-6 pt-05 ps-md-05">
+                    <div class="row newsbox">
+                        <article class="col-6">
+                            <div class="card card-full text-white overflow zoom">
+                                <!--thumbnail-->
+                                <div class="height-ratio image-wrapper">
+                                    <a
+                                        href="https://demo.bootstrap.news/default/2019/06/how-aerobic-classes-can-make-you-a-better-problem-solver/">
+                                        <img width="282" height="240" src="assets/img/carousel2.jpg"
+                                            class="img-fluid lazy wp-post-image entered loaded"
+                                            alt="How Aerobic Classes Can Make You a Better Problem Solver"
+                                            loading="lazy" data-src="assets/img/carousel2.jpg" srcset="
+                          assets/img/carousel2.jpg 282w
+                        " sizes="(max-width: 282px) 100vw, 282px" data-ll-status="loaded" />
+                                    </a>
+                                </div>
+                                <div class="position-absolute px-3 pb-3 pt-0 b-0 w-100">
+                                    <!-- post title -->
+                                    <h3 class="h6 h4-sm h6-md h5-lg text-white my-1">
+                                        <a class="text-white"
+                                            href="https://demo.bootstrap.news/default/2019/06/how-aerobic-classes-can-make-you-a-better-problem-solver/">How
+                                            Aerobic Classes Can Make You a Better Problem
+                                            Solver</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="col-6">
+                            <div class="card card-full text-white overflow zoom">
+                                <!--thumbnail-->
+                                <div class="height-ratio image-wrapper">
+                                    <a
+                                        href="https://demo.bootstrap.news/default/2019/06/heres-how-fast-and-far-a-sneeze-can-carry-contagious-germs/">
+                                        <img width="282" height="240" src="assets/img/carousel3.jpg"
+                                            class="img-fluid lazy wp-post-image entered loaded"
+                                            alt="Here’s How Fast and Far a Sneeze Can Carry Contagious Germs"
+                                            loading="lazy" data-src="assets/img/carousel3.jpg" srcset="
+                          assets/img/carousel3.jpg 282w
+                        " sizes="(max-width: 282px) 100vw, 282px" data-ll-status="loaded" />
+                                    </a>
+                                </div>
+                                <div class="position-absolute px-3 pb-3 pt-0 b-0 w-100 bg-shadow">
+                                    <!-- post title -->
+                                    <h3 class="h6 h4-sm h6-md h5-lg text-white my-1">
+                                        <a class="text-white"
+                                            href="https://demo.bootstrap.news/default/2019/06/heres-how-fast-and-far-a-sneeze-can-carry-contagious-germs/">Here’s
+                                            How Fast and Far a Sneeze Can Carry Contagious
+                                            Germs</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="col-6">
+                            <div class="card card-full text-white overflow zoom">
+                                <!--thumbnail-->
+                                <div class="height-ratio image-wrapper">
+                                    <a
+                                        href="https://demo.bootstrap.news/default/2019/06/fans-celebrate-in-paris-after-side-reaches-world-cup-final-2/">
+                                        <img width="282" height="240" src="assets/img/carousel3.jpg"
+                                            class="img-fluid lazy wp-post-image entered loaded"
+                                            alt="Fans celebrate in Paris after side reaches World Cup final"
+                                            loading="lazy" data-src="assets/img/carousel3.jpg" srcset="
+                          assets/img/carousel3.jpg 282w
+                        " sizes="(max-width: 282px) 100vw, 282px" data-ll-status="loaded" />
+                                    </a>
+                                </div>
+                                <div class="position-absolute px-3 pb-3 pt-0 b-0 w-100 bg-shadow">
+                                    <!-- post title -->
+                                    <h3 class="h6 h4-sm h6-md h5-lg text-white my-1">
+                                        <a class="text-white"
+                                            href="https://demo.bootstrap.news/default/2019/06/fans-celebrate-in-paris-after-side-reaches-world-cup-final-2/">Fans
+                                            celebrate in Paris after side reaches World Cup
+                                            final</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="col-6">
+                            <div class="card card-full text-white overflow zoom">
+                                <!--thumbnail-->
+                                <div class="height-ratio image-wrapper">
+                                    <a
+                                        href="https://demo.bootstrap.news/default/2019/06/5-tips-to-save-money-booking-your-next-hotel-room/">
+                                        <img width="282" height="240" src="assets/img/carousel4.jpg"
+                                            class="img-fluid lazy wp-post-image entered loaded"
+                                            alt="5 Tips to Save Money Booking Your Next Hotel Room" loading="lazy"
+                                            data-src="assets/img/carousel4.jpg" srcset="
+                          assets/img/carousel4.jpg 282w
+                        " sizes="(max-width: 282px) 100vw, 282px" data-ll-status="loaded" />
+                                    </a>
+                                </div>
+                                <div class="position-absolute px-3 pb-3 pt-0 b-0 w-100 bg-shadow">
+                                    <!-- post title -->
+                                    <h3 class="h6 h4-sm h6-md h5-lg text-white my-1">
+                                        <a class="text-white"
+                                            href="https://demo.bootstrap.news/default/2019/06/5-tips-to-save-money-booking-your-next-hotel-room/">5
+                                            Tips to Save Money Booking Your Next Hotel Room</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <!--End box news-->
+            </div>
+        </div>
+    </div>
+    <!-- akhir -->
+
+    <div class="container">
+        <div class="row">
+            <h1>Berita Terkini</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-2">
+                        <img src="assets/img/carousel1.jpg" class="card-img-top img-berita" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">31 Desember 2500</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-2">
+                        <img src="assets/img/carousel2.jpg" class="card-img-top img-berita" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">31 Desember 2500</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-2">
+                        <img src="assets/img/carousel2.jpg" class="card-img-top img-berita" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">31 Desember 2500</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-2">
+                        <img src="assets/img/carousel2.jpg" class="card-img-top img-berita" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">31 Desember 2500</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-2">
+                        <img src="assets/img/carousel2.jpg" class="card-img-top img-berita" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">31 Desember 2500</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-2">
+                        <img src="assets/img/carousel2.jpg" class="card-img-top img-berita" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">31 Desember 2500</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-4 d-flex justify-content-center">
+                <a href="" class="grey">Lihat Semua Berita >></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-white" style="background-color: #2657A7">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-between p-4" style="background-color: #2657A7">
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold" style="color: white;">LLDIKTI Wilayah 4</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p style="color: white;">
+                            LLDIKTI Wilayah 4 memiliki tugas melaksanakan fasilitasi peningkatan mutu penyelenggaraan
+                            pendidikan tinggi di provinsi Jawa Barat. Dalam melaksanakan tugas fasilitasi peningkatan
+                            mutu tersebut
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold" style="color: white;">Kontak</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            <a href="#!" class="text-white">lorem</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-white">lorem</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-white">lorem</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-white">lorem Angular</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold" style="color: white;">Situs terkait</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            <a href="#!" class="text-white">lorem</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-white">lorem</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-white">lorem</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-white">lorem</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold" style="color: white;">Situs terkait</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            <a href="#!" class="text-white">lorem</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-white">lorem</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-white">lorem</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-white">lorem</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2020 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">ARS</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a6c2996973.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
